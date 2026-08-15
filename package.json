@@ -1,0 +1,11 @@
+{
+  "name": "kickstart-wordpress-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WordPress theme version of Kickstart, no React",
+  "scripts": {
+    "start": "php -S localhost:8000 -t wp-content/themes/kickstart-theme"
+  },
+  "author": "Your Name",
+  "license": "GPL-2.0-or-later"
+}
