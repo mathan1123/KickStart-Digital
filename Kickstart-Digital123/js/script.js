@@ -210,19 +210,91 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = false;
       }
 
-      if (isValid) {
-        if (successBanner) {
-          successBanner.style.display = 'flex';
-          successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      if (!isValid) return;
+
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message';
+      if (submitBtn) {
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+      }
+
+      try {
+        let isSuccess = false;
+
+        // 1. Try Netlify Native Forms Submission first (Best & 100% reliable on Netlify)
+        if (window.location.hostname.includes('netlify') || window.location.hostname !== 'localhost') {
+          try {
+            const formData = new FormData(contactForm);
+            formData.set('form-name', 'contact');
+            const netlifyRes = await fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(formData).toString()
+            });
+            if (netlifyRes.ok) {
+              isSuccess = true;
+            }
+          } catch (e) {
+            console.warn('Netlify form submission failed, trying fallback...', e);
+          }
         }
 
-        contactForm.reset();
+        // 2. Fallback to FormSubmit AJAX API if not on Netlify or if Netlify submit wasn't handled
+        if (!isSuccess) {
+          const payload = {
+            name: nameInput.value.trim(),
+            email: emailInput.value.trim(),
+            company: companyInput?.value.trim() || '',
+            phone: phoneInput?.value.trim() || '',
+            message: messageInput.value.trim(),
+            _subject: 'New Contact Form Submission - Kickstart Digital',
+            _captcha: 'false',
+            _template: 'table'
+          };
 
-        setTimeout(() => {
-          if (successBanner) {
-            successBanner.style.display = 'none';
+          const response = await fetch('https://formsubmit.co/ajax/kickstartdigital123@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          const data = await response.json().catch(() => ({}));
+          if (response.ok && (data.success === 'true' || data.success === true || !data.message || data.message.includes('success'))) {
+            isSuccess = true;
           }
-        }, 6000);
+        }
+
+        if (isSuccess) {
+          if (successBanner) {
+            successBanner.style.display = 'flex';
+            successBanner.style.borderColor = 'rgba(0, 255, 157, 0.8)';
+            successBanner.style.color = 'var(--neon-green)';
+            successBanner.innerHTML = '<i class="fa-solid fa-circle-check text-green"></i><span>Thank you! Your message has been sent successfully. We will get back to you within 24 hours.</span>';
+            successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          contactForm.reset();
+        } else {
+          throw new Error('Form submission could not be completed.');
+        }
+      } catch (error) {
+        console.error('Submission error:', error);
+        if (successBanner) {
+          successBanner.style.display = 'flex';
+          successBanner.style.borderColor = 'rgba(239, 68, 68, 0.9)';
+          successBanner.style.color = '#FCA5A5';
+          successBanner.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i><span>Unable to send right now. Please email directly at kickstartdigital123@gmail.com.</span>';
+          successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+        }
       }
     });
   }
