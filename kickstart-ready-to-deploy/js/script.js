@@ -188,27 +188,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
-     7. CONTACT FORM CLIENT-SIDE VALIDATION & DIRECT FORMSUBMIT
+     7. CONTACT FORM CLIENT-SIDE VALIDATION & WEB3FORMS API
      ------------------------------------------------------------------------ */
   const contactForm = document.getElementById('contact-form');
   const successBanner = document.getElementById('form-success-banner');
 
-  // Check if returning from FormSubmit submission
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('submitted') === 'true' && successBanner) {
-    successBanner.style.display = 'flex';
-    successBanner.style.borderColor = 'rgba(0, 255, 157, 0.8)';
-    successBanner.style.color = 'var(--neon-green)';
-    successBanner.innerHTML = '<i class="fa-solid fa-circle-check text-green"></i><span>Thank you! Your message has been sent successfully. We will get back to you within 24 hours.</span>';
-    successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
       let isValid = true;
 
       const nameInput = document.getElementById('contact-name');
       const emailInput = document.getElementById('contact-email');
+      const companyInput = document.getElementById('contact-company');
+      const phoneInput = document.getElementById('contact-phone');
       const messageInput = document.getElementById('contact-message');
       const submitBtn = document.getElementById('contact-submit-btn');
 
@@ -235,15 +228,64 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = false;
       }
 
-      if (!isValid) {
-        e.preventDefault();
-        return;
-      }
+      if (!isValid) return;
 
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message';
       if (submitBtn) {
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         submitBtn.style.opacity = '0.7';
+      }
+
+      try {
+        const payload = {
+          access_key: "6e0adfc7-30bc-49bf-a64e-701c2d2588f1",
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          company: companyInput?.value.trim() || 'N/A',
+          phone: phoneInput?.value.trim() || 'N/A',
+          message: messageInput.value.trim(),
+          subject: 'New Contact Form Submission - Kickstart Digital'
+        };
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          if (successBanner) {
+            successBanner.style.display = 'flex';
+            successBanner.style.borderColor = 'rgba(0, 255, 157, 0.8)';
+            successBanner.style.color = 'var(--neon-green)';
+            successBanner.innerHTML = '<i class="fa-solid fa-circle-check text-green"></i><span>Thank you! Your message has been sent successfully. We will get back to you within 24 hours.</span>';
+            successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          contactForm.reset();
+        } else {
+          throw new Error(result.message || 'Email delivery failed');
+        }
+      } catch (error) {
+        console.error('Web3Forms submit error:', error);
+        if (successBanner) {
+          successBanner.style.display = 'flex';
+          successBanner.style.borderColor = 'rgba(239, 68, 68, 0.9)';
+          successBanner.style.color = '#FCA5A5';
+          successBanner.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i><span>Unable to send right now. Please email directly at kickstartdigital123@gmail.com.</span>';
+          successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+        }
       }
     });
   }
