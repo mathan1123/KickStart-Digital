@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KICKSTART — Result-Driven Digital Marketing Agency</title>
+  <meta name="description" content="KICKSTART helps ambitious businesses attract more customers, build stronger brands, and turn digital marketing into measurable revenue growth.">
+  <meta name="keywords" content="Digital Marketing Agency, SEO, Paid Ads, Social Media Marketing, Web Design, Content Marketing, Analytics">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KICKSTART — Result-Driven Digital Marketing Agency">
+  <meta property="og:description" content="Grow your business with smarter digital marketing strategies designed for measurable ROI.">
+  <meta property="og:image" content="https://kickstart.digital/og-image.jpg">
+
+  <!-- Google Fonts (Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. HEADER / NAVBAR
+       ========================================================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="#" class="logo">
+        KICKSTART<span class="logo-dot"></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li class="mobile-menu-header">
+            <a href="#" class="mobile-menu-brand">
+              KICKSTART<span class="logo-dot"></span>
+            </a>
+            <button class="mobile-menu-close" aria-label="Close navigation menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#why-us" class="nav-link">Why Choose Us</a></li>
+          <li><a href="#results" class="nav-link">Results</a></li>
+          <li><a href="#calculator" class="nav-link">ROI Calculator</a></li>
+          <li><a href="#process" class="nav-link">How We Work</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode" title="Switch Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+  <section id="hero" class="hero">
+    <canvas id="hero-ai-canvas" class="hero-canvas"></canvas>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="section-badge badge-green">
+          <i class="fa-solid fa-chart-line text-green"></i> RESULT-DRIVEN DIGITAL MARKETING
+        </div>
+
+        <h1 class="hero-title">
+          Grow Your Business With <span class="text-gradient">Smarter Digital Marketing</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          We help ambitious businesses attract more customers, build stronger brands, and turn digital marketing into predictable, scalable revenue growth.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            Get Started <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#services" class="btn btn-secondary btn-lg">
+            Explore Services
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-avatars">
+            <div class="trust-avatar">SJ</div>
+            <div class="trust-avatar">MR</div>
+            <div class="trust-avatar">AL</div>
+            <div class="trust-avatar">KC</div>
+          </div>
+          <span>Trusted by <strong class="text-green">250+ growing businesses</strong> worldwide</span>
+        </div>
+      </div>
+
+      <!-- Hero Visual (3D Parallax Dashboard) -->
+      <div class="hero-visual reveal">
+        <div class="floating-card floating-card-1">
+          <div class="floating-icon icon-green">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </div>
+          <div>
+            <div class="floating-val text-green">+248%</div>
+            <div class="floating-lbl">Organic Search Traffic</div>
+          </div>
+        </div>
+
+        <div class="floating-card floating-card-2">
+          <div class="floating-icon icon-blue">
+            <i class="fa-solid fa-sack-dollar"></i>
+          </div>
+          <div>
+            <div class="floating-val text-blue">4.8x</div>
+            <div class="floating-lbl">Average ROI</div>
+          </div>
+        </div>
+
+        <div class="floating-card floating-card-3">
+          <div class="floating-icon icon-green">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <div>
+            <div class="floating-val text-green">+72%</div>
+            <div class="floating-lbl">Lead Conversions</div>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="dashboard-header">
+            <span class="dashboard-title">
+              <i class="fa-solid fa-chart-simple text-green"></i> Performance Analytics
+            </span>
+            <div class="dashboard-tabs">
+              <span class="dashboard-tab">7D</span>
+              <span class="dashboard-tab active">30D</span>
+              <span class="dashboard-tab">1Y</span>
+            </div>
+          </div>
+
+          <div class="dashboard-chart">
+            <div class="chart-bar-wrap">
+              <div class="chart-bar" style="height: 45%;"></div>
+              <span class="chart-label">Mon</span>
+            </div>
+            <div class="chart-bar-wrap">
+              <div class="chart-bar" style="height: 65%;"></div>
+              <span class="chart-label">Tue</span>
+            </div>
+            <div class="chart-bar-wrap">
+              <div class="chart-bar" style="height: 55%;"></div>
+              <span class="chart-label">Wed</span>
+            </div>
+            <div class="chart-bar-wrap">
+              <div class="chart-bar" style="height: 85%;"></div>
+              <span class="chart-label">Thu</span>
+            </div>
+            <div class="chart-bar-wrap">
+              <div class="chart-bar" style="height: 70%;"></div>
+              <span class="chart-label">Fri</span>
+            </div>
+            <div class="chart-bar-wrap">
+              <div class="chart-bar" style="height: 95%;"></div>
+              <span class="chart-label">Sat</span>
+            </div>
+            <div class="chart-bar-wrap">
+              <div class="chart-bar" style="height: 100%;"></div>
+              <span class="chart-label">Sun</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. TRUST / CLIENT PARTNERS
+       ========================================================================== -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-title">Trusted by industry leaders & fast-growing brands</div>
+      <div class="logo-grid">
+        <div class="client-logo">NOVA</div>
+        <div class="client-logo">VERTEX</div>
+        <div class="client-logo">ORBIT</div>
+        <div class="client-logo">LUMEN</div>
+        <div class="client-logo">PIXEL</div>
+        <div class="client-logo">SCALE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. SERVICES SECTION
+       ========================================================================== -->
+  <section id="services" class="section section-bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge badge-green">OUR SERVICES</div>
+        <h2 class="section-title">Everything You Need to <span class="text-gradient">Grow Online</span></h2>
+        <p class="section-description">
+          From strategy to execution, we build high-impact digital marketing systems designed to generate real, measurable business results.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div>
+            <div class="service-icon-box">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <span class="service-tag">ORGANIC SEARCH</span>
+            <h3 class="service-title">Search Engine Optimization (SEO)</h3>
+            <p class="service-desc">
+              Improve search rankings, capture high-intent organic keywords, and attract consistent qualified traffic that converts into paying customers.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span><i class="fa-solid fa-arrow-trend-up text-green"></i> +240% Search Traffic</span>
+            <span>Sustainable Growth</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div>
+            <div class="service-icon-box">
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <span class="service-tag">PAID MEDIA</span>
+            <h3 class="service-title">Paid Advertising (Google & Meta Ads)</h3>
+            <p class="service-desc">
+              Generate qualified leads and immediate sales with high-converting, finely targeted Google, Facebook, and Instagram ad campaigns.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span><i class="fa-solid fa-bolt text-green"></i> 4.8x Avg ROAS</span>
+            <span>Targeted Reach</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div>
+            <div class="service-icon-box">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <span class="service-tag">BRAND & SOCIAL</span>
+            <h3 class="service-title">Social Media Marketing</h3>
+            <p class="service-desc">
+              Build an engaged online audience, create authority-building content, and cultivate loyal customer relationships across key platforms.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span><i class="fa-solid fa-users text-green"></i> +300% Engagement</span>
+            <span>Brand Loyalty</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div>
+            <div class="service-icon-box">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <span class="service-tag">WEB DESIGN</span>
+            <h3 class="service-title">Web Design & Development</h3>
+            <p class="service-desc">
+              Create lightning-fast, mobile-responsive, modern websites built from the ground up for superior user experience and maximum conversion.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span><i class="fa-solid fa-gauge-high text-green"></i> 99/100 Speed Score</span>
+            <span>High Conversion</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div>
+            <div class="service-icon-box">
+              <i class="fa-solid fa-file-pen"></i>
+            </div>
+            <span class="service-tag">CONTENT STRATEGY</span>
+            <h3 class="service-title">Content Marketing & Copywriting</h3>
+            <p class="service-desc">
+              Turn persuasive storytelling, high-value landing page copy, and informative articles into customer trust and repeat business.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span><i class="fa-solid fa-check text-green"></i> Higher Conversions</span>
+            <span>Authority Building</span>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div>
+            <div class="service-icon-box">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <span class="service-tag">DATA & INSIGHTS</span>
+            <h3 class="service-title">Analytics & Conversion Optimization</h3>
+            <p class="service-desc">
+              Eliminate guesswork with full-funnel tracking, transparent reporting, and continuous A/B testing to steadily increase your ROI.
+            </p>
+          </div>
+          <div class="service-meta">
+            <span><i class="fa-solid fa-chart-line text-green"></i> 100% Transparency</span>
+            <span>Actionable Data</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. WHY CHOOSE US
+       ========================================================================== -->
+  <section id="why-us" class="section">
+    <div class="container about-grid">
+      <!-- Why Choose Us Visual -->
+      <div class="ai-core-visual reveal-left">
+        <div class="ai-radar-ring"></div>
+        <div style="position: relative; z-index: 2;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <span class="section-badge badge-green"><i class="fa-solid fa-shield-halved text-green"></i> PERFORMANCE DRIVEN</span>
+            <span class="ai-speed-tag">98% Satisfaction</span>
+          </div>
+
+          <h3 class="contact-info-title text-green" style="font-size: 1.5rem; margin-bottom: 12px;">
+            Marketing Connected to Real Revenue
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+            We don't just focus on vanity metrics like clicks and impressions. We build end-to-end digital growth funnels designed to deliver bottom-line profit.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-bolt text-green"></i></div>
+              <div>
+                <div style="font-size: 1.2rem; font-weight: 900; color: var(--neon-green);">100%</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Transparent Reporting</div>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-bullseye text-blue"></i></div>
+              <div>
+                <div style="font-size: 1.2rem; font-weight: 900; color: var(--electric-blue);">4.8x</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Average Client ROI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <div class="section-badge">WHY CHOOSE US</div>
+        <h2 class="section-title">Marketing That Connects <span class="text-gradient">Strategy With Results</span></h2>
+        <p class="section-description">
+          Kickstart is a full-service digital marketing agency that combines high-level strategy, creative execution, and conversion optimization to deliver sustainable business growth.
+        </p>
+
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-check text-green"></i></div>
+            <span>Data-Driven Growth Strategies</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-check text-green"></i></div>
+            <span>Transparent Weekly & Monthly Reporting</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-check text-green"></i></div>
+            <span>Dedicated Growth Specialists</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-check text-green"></i></div>
+            <span>Obsessed With Measurable ROI</span>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary">
+          Why Choose Us <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. RESULTS / IMPACT SECTION
+       ========================================================================== -->
+  <section id="results" class="section stats-section">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom: 50px;">
+        <div class="section-badge badge-green"><i class="fa-solid fa-chart-line text-green"></i> OUR IMPACT</div>
+        <h2 class="section-title">Numbers That Speak <span class="text-gradient">For Themselves</span></h2>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="250+">0</div>
+          <div class="stat-label">Businesses Helped</div>
+          <div class="stat-badge-tag"><i class="fa-solid fa-arrow-trend-up"></i> Global Scale</div>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="4.8x">0</div>
+          <div class="stat-label">Average Client ROI</div>
+          <div class="stat-badge-tag"><i class="fa-solid fa-bolt"></i> Verified ROI</div>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="94%">0</div>
+          <div class="stat-label">Client Retention Rate</div>
+          <div class="stat-badge-tag"><i class="fa-solid fa-check"></i> Long-Term Trust</div>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-number" data-target="1.5M+">0</div>
+          <div class="stat-label">Leads Generated</div>
+          <div class="stat-badge-tag"><i class="fa-solid fa-users"></i> Qualified Growth</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. CASE STUDIES SECTION
+       ========================================================================== -->
+  <section class="section section-bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">CASE STUDIES</div>
+        <h2 class="section-title">Real Strategies. <span class="text-gradient">Real Results.</span></h2>
+        <p class="section-description">Take a look at how we helped companies across diverse industries scale revenue and lead volume.</p>
+      </div>
+
+      <div class="case-studies-grid">
+        <div class="case-card reveal">
+          <div class="case-visual">
+            <span class="case-badge">SEO + Paid Ads</span>
+            <div class="case-result-badge">+186% Revenue</div>
+          </div>
+          <div class="case-content">
+            <div>
+              <h3 class="case-title">E-Commerce Brand Growth</h3>
+              <p class="case-category">Scaled organic search traffic and optimized high-intent Meta ad campaigns.</p>
+            </div>
+            <a href="#contact" class="case-link">Read Case Study <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-visual">
+            <span class="case-badge">Performance Marketing</span>
+            <div class="case-result-badge">+240% Leads</div>
+          </div>
+          <div class="case-content">
+            <div>
+              <h3 class="case-title">SaaS Lead Generation</h3>
+              <p class="case-category">Redesigned full conversion funnels and managed targeted Google & LinkedIn ad campaigns.</p>
+            </div>
+            <a href="#contact" class="case-link">Read Case Study <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-visual">
+            <span class="case-badge">Local SEO + Ads</span>
+            <div class="case-result-badge">+165% Inquiries</div>
+          </div>
+          <div class="case-content">
+            <div>
+              <h3 class="case-title">Local Business Domination</h3>
+              <p class="case-category">Captured top search positions for high-value local queries and streamlined lead capture.</p>
+            </div>
+            <a href="#contact" class="case-link">Read Case Study <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-btn-wrap reveal">
+        <a href="#contact" class="btn btn-secondary">View All Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. ROI CALCULATOR / GROWTH SIMULATOR SECTION
+       ========================================================================== -->
+  <section id="calculator" class="ai-sim-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge badge-green"><i class="fa-solid fa-calculator text-green"></i> ROI CALCULATOR</div>
+        <h2 class="section-title">Calculate Your <span class="text-gradient">Revenue & Growth Potential</span></h2>
+        <p class="section-description">
+          Adjust the sliders below to estimate your return on marketing investment based on your monthly budget and industry.
+        </p>
+      </div>
+
+      <div class="ai-sim-grid">
+        <!-- Interactive Controls -->
+        <div class="ai-sim-box reveal-left">
+          <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--text-main); font-weight: 800;">
+            <i class="fa-solid fa-sliders text-green"></i> Growth Parameters
+          </h3>
+
+          <div class="ai-sim-slider-wrap">
+            <div class="ai-slider-header">
+              <label class="form-label" style="margin: 0; font-size: 0.95rem;">Monthly Ad Investment</label>
+              <span id="ai-budget-val" class="ai-slider-val">$5,000/mo</span>
+            </div>
+            <input type="range" id="ai-budget-slider" class="ai-slider" min="1000" max="50000" step="500" value="5000">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">
+              <span>$1k/mo</span>
+              <span>$25k/mo</span>
+              <span>$50k+/mo</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <label class="form-label" style="font-size: 0.95rem;">Select Industry</label>
+            <div class="ai-ind-btn-group">
+              <button type="button" class="ai-ind-btn active" data-mult="1.2">
+                <i class="fa-solid fa-cart-shopping text-green"></i> E-Commerce
+              </button>
+              <button type="button" class="ai-ind-btn" data-mult="1.35">
+                <i class="fa-solid fa-cloud text-blue"></i> SaaS & Tech
+              </button>
+              <button type="button" class="ai-ind-btn" data-mult="1.0">
+                <i class="fa-solid fa-store text-green"></i> Local Business
+              </button>
+              <button type="button" class="ai-ind-btn" data-mult="1.15">
+                <i class="fa-solid fa-user-doctor text-blue"></i> Healthcare & B2B
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-Time Output Card -->
+        <div class="ai-sim-output-card reveal-right">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.85rem; font-weight: 800; color: var(--electric-blue); text-transform: uppercase; letter-spacing: 0.08em;">
+              <i class="fa-solid fa-chart-line text-green"></i> Projected Output
+            </span>
+            <span class="ai-speed-tag">Estimated Forecast</span>
+          </div>
+
+          <div class="ai-sim-metrics">
+            <div class="ai-metric-item">
+              <div class="ai-metric-lbl">Projected Revenue</div>
+              <div id="sim-revenue" class="ai-metric-num text-green">$25,200</div>
+            </div>
+            <div class="ai-metric-item">
+              <div class="ai-metric-lbl">Target ROAS</div>
+              <div id="sim-roas" class="ai-metric-num text-blue">5.0x</div>
+            </div>
+            <div class="ai-metric-item">
+              <div class="ai-metric-lbl">Qualified Leads</div>
+              <div id="sim-leads" class="ai-metric-num text-green">+188</div>
+            </div>
+            <div class="ai-metric-item">
+              <div class="ai-metric-lbl">CPA Reduction</div>
+              <div id="sim-cpa" class="ai-metric-num text-blue">-31%</div>
+            </div>
+          </div>
+
+          <!-- Wave Canvas -->
+          <div class="ai-sim-wave-wrap">
+            <canvas id="ai-sim-wave-canvas" style="width: 100%; height: 80px;"></canvas>
+          </div>
+
+          <a href="#contact" id="sim-claim-btn" class="btn btn-primary btn-full btn-lg">
+            Lock In This Growth Plan <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. HOW WE WORK / PROCESS SECTION
+       ========================================================================== -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge badge-green"><i class="fa-solid fa-list-check text-green"></i> HOW WE WORK</div>
+        <h2 class="section-title">How We Turn <span class="text-gradient">Strategy Into Growth</span></h2>
+        <p class="section-description">A proven 4-step framework designed to deliver consistent, scalable results for your business.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="process-number">01</div>
+          <h3 class="process-title">Discover & Analyze</h3>
+          <p class="process-desc">Deep-dive into your business model, target audience, competitive landscape, and primary revenue goals.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-number">02</div>
+          <h3 class="process-title">Strategize & Plan</h3>
+          <p class="process-desc">Develop a tailored, multi-channel marketing roadmap designed specifically for high conversion and maximum ROI.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-number">03</div>
+          <h3 class="process-title">Execute & Launch</h3>
+          <p class="process-desc">Deploy high-performing ad campaigns, optimized landing pages, high-value content, and technical SEO.</p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-number">04</div>
+          <h3 class="process-title">Optimize & Scale</h3>
+          <p class="process-desc">Continuously track metrics, run A/B conversion tests, eliminate wasted ad spend, and scale winning strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. TESTIMONIALS SECTION
+       ========================================================================== -->
+  <section id="testimonials" class="section section-bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">TESTIMONIALS</div>
+        <h2 class="section-title">What Our <span class="text-gradient">Clients Say</span></h2>
+        <p class="section-description">Hear directly from business owners and marketing executives who accelerated their growth with Kickstart.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Working with Kickstart completely changed our digital strategy. Within months, we saw a 240% increase in qualified leads and a huge boost in revenue."
+            </p>
+          </div>
+          <div class="testimonial-user">
+            <div class="user-avatar">SJ</div>
+            <div>
+              <div class="user-name">Sarah Johnson</div>
+              <div class="user-role">Founder, Bloom Studio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The team at Kickstart is unmatched. Their data-driven approach to Google Ads reduced our cost-per-acquisition by 40% while doubling sales."
+            </p>
+          </div>
+          <div class="testimonial-user">
+            <div class="user-avatar">MR</div>
+            <div>
+              <div class="user-name">Michael Reynolds</div>
+              <div class="user-role">CEO, Vantage Tech</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Transparent reporting, fantastic web design, and a team that genuinely cares about our ROI. Easily the best agency partner we've ever hired."
+            </p>
+          </div>
+          <div class="testimonial-user">
+            <div class="user-avatar">AL</div>
+            <div>
+              <div class="user-name">Amanda Lee</div>
+              <div class="user-role">Marketing Director, Nova Health</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. CTA SECTION
+       ========================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2 class="cta-title">Ready To Turn Your Digital Presence Into Growth?</h2>
+        <p class="cta-desc">
+          Let's build a customized marketing strategy that brings you more traffic, leads, and paying customers.
+        </p>
+        <a href="#contact" class="btn btn-primary btn-lg">
+          Start Your Growth Journey <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <div class="cta-note text-green">
+          ⚡ No long-term commitment required. Let's start with a friendly conversation.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. CONTACT / ENQUIRY FORM SECTION
+       ========================================================================== -->
+  <section id="contact" class="section section-bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge badge-green">GET IN TOUCH</div>
+        <h2 class="section-title">Let's Talk About <span class="text-gradient">Your Growth</span></h2>
+        <p class="section-description">Have a project in mind or want to grow your business? Drop us a line below.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left Contact Info -->
+        <div class="contact-info-card reveal-left">
+          <div>
+            <h3 class="contact-info-title text-green">Let's Build Something Great Together</h3>
+            <p class="contact-info-sub">Our team is ready to analyze your marketing and build a custom growth roadmap.</p>
+
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <div class="contact-lbl">Email Us</div>
+                  <a href="mailto:kickstartdigital123@gmail.com" class="contact-val text-blue">kickstartdigital123@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <div class="contact-lbl">Call Us</div>
+                  <div class="contact-val text-green">+1 (555) 234-5678</div>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <div class="contact-lbl">Location</div>
+                  <div class="contact-val">100 Innovation Way, Suite 400<br>San Francisco, CA 94105</div>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                  <div class="contact-lbl">Business Hours</div>
+                  <div class="contact-val">Monday – Friday: 9am – 6pm PST</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Contact Form -->
+        <div class="contact-form-card reveal-right">
+          <div id="form-success-banner" class="form-success-banner">
+            <i class="fa-solid fa-circle-check text-green text-xl"></i>
+            <span>Thank you! Your message has been sent successfully. We will get back to you within 24 hours.</span>
+          </div>
+
+          <form id="contact-form" action="https://formsubmit.co/kickstartdigital123@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Contact Form Submission - Kickstart Digital">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://kickstart-digital2.netlify.app/?submitted=true">
+
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Full Name *</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. John Doe">
+              <span class="form-error">Please enter your name</span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address *</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. john@company.com">
+              <span class="form-error">Please enter a valid email</span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-company" class="form-label">Company Name</label>
+              <input type="text" id="contact-company" name="company" class="form-input" placeholder="e.g. Acme Corp">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-phone" class="form-label">Phone Number</label>
+              <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="e.g. +1 (555) 000-0000">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message *</label>
+              <textarea id="contact-message" name="message" class="form-textarea" placeholder="Tell us about your project or growth goals..."></textarea>
+              <span class="form-error">Please enter your message</span>
+            </div>
+
+            <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-full btn-lg">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       13. FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            KICKSTART<span class="logo-dot"></span>
+          </a>
+          <p class="footer-desc">
+            Full-service digital marketing agency helping ambitious businesses scale revenue, generate qualified leads, and build market leadership.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">Why Choose Us</a></li>
+            <li><a href="#results" class="footer-link">Results & Impact</a></li>
+            <li><a href="#process" class="footer-link">How We Work</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">SEO Optimization</a></li>
+            <li><a href="#services" class="footer-link">Paid Advertising</a></li>
+            <li><a href="#services" class="footer-link">Social Media Marketing</a></li>
+            <li><a href="#services" class="footer-link">Web Development</a></li>
+            <li><a href="#services" class="footer-link">Content Marketing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#results" class="footer-link">Case Studies</a></li>
+            <li><a href="#testimonials" class="footer-link">Client Reviews</a></li>
+            <li><a href="#calculator" class="footer-link">ROI Calculator</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Kickstart Digital. All rights reserved.</div>
+        <div>Designed for High Conversion & Performance.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       14. FLOATING SMART STRATEGIST CHAT WIDGET
+       ========================================================================== -->
+  <button id="ai-chat-toggle" class="ai-chat-toggle" aria-label="Open Strategist" title="Ask Growth Strategist">
+    <i class="fa-solid fa-comments"></i>
+    <span>Growth Strategist Online</span>
+  </button>
+
+  <div id="ai-chat-modal" class="ai-chat-modal">
+    <div class="ai-chat-header">
+      <div class="ai-chat-header-info">
+        <div class="ai-msg-avatar"><i class="fa-solid fa-headset"></i></div>
+        <div>
+          <div class="ai-chat-header-title">Kickstart Growth Strategist</div>
+          <div class="ai-chat-header-status"><span class="ai-live-dot" style="width: 6px; height: 6px;"></span> Active & Ready</div>
+        </div>
+      </div>
+      <button id="ai-chat-close" class="ai-chat-close" aria-label="Close Chat"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div id="ai-chat-messages" class="ai-chat-messages">
+      <div class="ai-msg ai-msg-bot">
+        <div class="ai-msg-avatar"><i class="fa-solid fa-headset"></i></div>
+        <div class="ai-msg-bubble">
+          👋 Hello! Welcome to <strong>Kickstart</strong>. How can we help scale your business marketing today?
+          <div class="ai-prompt-chips">
+            <button class="ai-prompt-chip">⚡ How do you generate leads?</button>
+            <button class="ai-prompt-chip">📊 What ROAS can I expect?</button>
+            <button class="ai-prompt-chip">🔍 What is in the Free Audit?</button>
+            <button class="ai-prompt-chip">💰 What are your growth packages?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-chat-footer">
+      <input type="text" id="ai-chat-input" class="ai-chat-input" placeholder="Ask anything about digital marketing...">
+      <button id="ai-chat-send" class="ai-chat-send" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    window.KICKSTART_GMAIL_WEBAPP_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
