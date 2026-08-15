@@ -795,8 +795,10 @@
             <span>Thank you! Your message has been sent successfully. We will get back to you within 24 hours.</span>
           </div>
 
-          <form id="contact-form" name="contact" data-netlify="true" novalidate>
-            <input type="hidden" name="form-name" value="contact">
+          <form id="contact-form" action="https://formsubmit.co/kickstartdigital123@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Contact Form Submission - Kickstart Digital">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://kickstart-digital2.netlify.app/?submitted=true">
 
             <div class="form-group">
               <label for="contact-name" class="form-label">Full Name *</label>
